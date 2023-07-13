@@ -6,7 +6,7 @@ import { REQUEST } from '@nestjs/core';
 @Injectable({ scope: Scope.REQUEST })
 export class TagsService {
   constructor(@Inject(REQUEST) request: unknown) {
-    console.log(request);
+    console.log(request, 'request in tagsserivce');
   }
 
   create(createTagDto: CreateTagDto) {
