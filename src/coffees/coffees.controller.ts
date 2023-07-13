@@ -34,7 +34,7 @@ export class CoffeesController {
   }
 
   @Get(':id')
-  findOne(@Param('id', EntityExistsPipe(Coffee)) id: string) {
+  findOne(@Param('id' /* EntityExistsPipe(Coffee) */) id: string) {
     return this.coffeesService.findOne(+id);
   }
 
